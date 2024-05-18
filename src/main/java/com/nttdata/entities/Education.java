@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -28,4 +30,8 @@ public class Education {
     @OneToOne(orphanRemoval = true)
     @JoinColumn(name = "degree_id")
     private Degree degree;
+
+    @ManyToMany(mappedBy = "educations")
+    private Set<Resume> resumes = new LinkedHashSet<>();
+
 }

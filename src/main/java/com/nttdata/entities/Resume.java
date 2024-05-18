@@ -64,4 +64,10 @@ public class Resume {
     @JoinTable(joinColumns = @JoinColumn(name = "resume_id"))
     private Set<Country> countries = new LinkedHashSet<>();
 
+    @ManyToMany
+    @JoinTable(name = "Resume_educations",
+            joinColumns = @JoinColumn(name = "resume_id"),
+            inverseJoinColumns = @JoinColumn(name = "educations_id"))
+    private Set<Education> educations = new LinkedHashSet<>();
+
 }
