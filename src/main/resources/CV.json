@@ -1,0 +1,242 @@
+{
+	"personalInfo": {
+		"givenName": "ADEL",
+		"familyName": "EL BIARI",
+		"legalName": null,
+		"formattedName": null,
+		"birthDate": "1974-01-21",
+		"nationality": "Morocco",
+		"email": "adelbiari@hotmail.com",
+		"phoneNumber": "+212 682065914",
+		"address": "Lot. Mounia, Mhanech II, Calle Bouarfa N°32, Et 4, 93000",
+		"primaryLanguage": "árabe"
+	},
+	"experiences": [
+		{
+			"title": "Manager",
+			"organization": "NTT DATA Morocco",
+			"city": "Tetuán",
+			"country": "Morocco",
+			"startDate": "2022-09-01",
+			"endDate": "Present",
+			"description": "Responsable del sector público español, telecomunicaciones, servicios públicos y procesos de automatización."
+		},
+		{
+			"title": "Senior Service Delivery Manager",
+			"organization": "NTT DATA Morocco",
+			"city": "Tetuán",
+			"country": "Morocco",
+			"startDate": "2021-03-01",
+			"endDate": "2022-09-01",
+			"description": "Participar y comprometerse en el desarrollo de los servicios. Asumir la responsabilidad del desarrollo de los planes de progreso y formularplanes de acción."
+		},
+		{
+			"title": "Service Delivery Manager",
+			"organization": "NTT DATA Morocco",
+			"city": "Tetuán",
+			"country": "Morocco",
+			"startDate": "2017-09-01",
+			"endDate": "2021-01-01",
+			"description": "Participar y comprometerse en el desarrollo de los servicios.Asumir la responsabilidad del desarrollo de los planes de progreso y formularplanes de acción.Garantizar el impacto de cualquier cambio en el nivel de servicio y sobre loscompromisos a nivel de servicio.Analizar y evaluar los resultados de los indicadores y proponer planes deacción.Seguimiento de KPI’s de servicio, garantizando el cumplimiento de los SLAsacordados en el contrato."
+		},
+		{
+			"title": "Colaborador universitario profesional",
+			"organization": "Escuela Nacional de Ciencias Aplicadas de Tetuán",
+			"city": "Tetuán",
+			"country": "Morocco",
+			"startDate": "2022-09-01",
+			"endDate": "Present",
+			"description": "Aplicacion y creacion de algoritmos para Toma de Decisiones en Redes Inalámbricas Cognitivas y la simulacion de los casos de estudios aplicando inteligencia artifical."
+		},
+		{
+			"title": "Senior Project Management",
+			"organization": "EVERIS",
+			"city": "Tetuán",
+			"country": "Morocco",
+			"startDate": "2016-11-01",
+			"endDate": "2017-09-01",
+			"description": "Responsable de ejecución de proyectos. Gestión de varios equipos dedesarrollo.Responsable del mantenimiento correctivo y evolutivo de los proyectos bancoSabadell.Toma de requisitos con cliente, análisis y diseño funcional de aplicaciones conarquitectura multicapa, modelado de base de datos, elaboración y ejecuciónde planes de prueba, documentación funcional y técnica, asistencia al clienteen despliegue en entornos productivos."
+		},
+		{
+			"title": "Manager",
+			"organization": "DocPath",
+			"city": "Ciudad Real",
+			"country": "Spain",
+			"startDate": "2014-04-01",
+			"endDate": "2016-10-01",
+			"description": "Liderazgo de grupos de desarrollo de cada servicio.Supervisión y seguimiento del desarrollo con objetivo de ahorro de costes delproyecto.Participación activa para aumentar la calidad y la eficiencia del procesosoftware."
+		},
+		{
+			"title": "Analista Programador",
+			"organization": "Centro Mixto I-D Indra-UCLM",
+			"city": "Ciudad Real",
+			"country": "Spain",
+			"startDate": "2012-06-01",
+			"endDate": "2013-04-01",
+			"description": "Desarrollo de aplicaciones en tecnología .Net (WPF - WCF), diseño de basede datos relacional SQL Server 2008, Linq to SQL, WCF, TFS, CLR."
+		},
+		{
+			"title": "Team Leader",
+			"organization": "DocPath",
+			"city": "Ciudad Real",
+			"country": "Spain",
+			"startDate": "2014-01-01",
+			"endDate": "2014-04-01",
+			"description": "Analisis y desarrollo de arquitectura software.Liderazgo de un grupo de desarrollo.Planificación de tareas y seguimiento del desarrollo del proyecto."
+		},
+		{
+			"title": "Analista Programador Senior",
+			"organization": "DocPath",
+			"city": "Ciudad Real",
+			"country": "Spain",
+			"startDate": "2013-04-01",
+			"endDate": "2014-02-01",
+			"description": "Desarrollo de aplicaciones para la gestión documental en tecnología .NetFramework 4.0 con WPF, Linq to SQL, WCF, SVN, CLR."
+		},
+		{
+			"title": "Analista Programador",
+			"organization": "ARI Business Solutions",
+			"city": "Málaga",
+			"country": "Spain",
+			"startDate": "2010-04-01",
+			"endDate": "2011-12-31",
+			"description": "Desarrollo de aplicaciones web y winforms, desarrollo de arquitecturasmulticapa, MVC, Silverlight, diseño de base de datos relacional SQL Server2005/2008, Linq to SQL, WCF, TFS, CLR, XML, XLST. Liderazgo de grupos de desarrollo.Planificación de tareas y seguimiento del desarrollo con objetivo de ahorro decostes del proyecto."
+		},
+		{
+			"title": "Programador Senior .Net",
+			"organization": "ARI Business Solutions",
+			"city": "Málaga",
+			"country": "Spain",
+			"startDate": "2008-03-01",
+			"endDate": "2010-04-01",
+			"description": "Programado en tecnología .NET Desarrollo de alplicaciones Web y EscritorioPrpgramación orientada a objetos, ASP y ASP.NET, C#, VB, ADO .net SQLServer 2000/2005."
+		},
+		{
+			"title": "Programador .Net",
+			"organization": "Avanade",
+			"city": "Málaga",
+			"country": "Spain",
+			"startDate": "2007-01-01",
+			"endDate": "2008-03-01",
+			"description": "Desarrollo y mantenimiento de aplicaciones en Tecnologia .Net Modificacion de SP en PL/SQL y optimizacion de consultas. Generacion y test de web services y consultas a la BBDD."
+		}
+	],
+	"education": [
+		{
+			"degree": "Máster Universitario en Tecnologías Informáticas Avanzadas, Inteligencia artificial",
+			"institution": "Universidad de Castilla-La Mancha",
+			"startDate": "2013-09-01",
+			"endDate": "2014-07-01",
+			"city": "Ciudad Real",
+			"country": "Spain"
+		},
+		{
+			"degree": "Maîtrise en Ingénierie des Systèmes d'Information - ISI, Ingeniería informática",
+			"institution": "Université de Corse Pascal Paoli",
+			"startDate": "2008-09-01",
+			"endDate": "2009-07-01",
+			"city": "Corsica",
+			"country": "France"
+		},
+		{
+			"degree": "Ingeniería Técnica de Telecomunicación",
+			"institution": "Universidad de Málaga",
+			"startDate": "1998-09-01",
+			"endDate": "2004-07-01",
+			"city": " Málaga",
+			"country": "Spain"
+		},
+		{
+			"degree": " Analista Programador J2EE",
+			"institution": "Ingenia",
+			"startDate": "2011-01-01",
+			"endDate": "2011-07-06",
+			"city": "Málaga",
+			"country": "Spain"
+		},
+		{
+			"degree": "Curso Especializado en Project Management",
+			"institution": "Associated with DocPath",
+			"startDate": "2015-03-01",
+			"endDate": "2015-05-01",
+			"city": "Ciudad Real",
+			"country": "Spain"
+		},
+		{
+			"degree": "Curso de emprendedores, Creación y gestión de empresas.",
+			"institution": "Centro de Apoyo al Desarrollo Empresarial CADE",
+			"startDate": "2007-01-01",
+			"endDate": "2007-04-01",
+			"city": "Málaga",
+			"country": "Spain"
+		},
+		{
+			"degree": "Prevención de riesgos laborales",
+			"institution": "Novasoft",
+			"startDate": "2009-05-01",
+			"endDate": "2009-05-01",
+			"city": "Málaga",
+			"country": "Spain"
+		},
+		{
+			"degree": "Protección de datos",
+			"institution": "IMFE",
+			"startDate": "2009-06-01",
+			"endDate": "2009-06-01",
+			"city": "Málaga",
+			"country": "Spain"
+		},
+		{
+			"degree": "SharePoint 2007",
+			"institution": "Avanade",
+			"startDate": "2007-06-01",
+			"endDate": "2007-08-01",
+			"city": "Madrid",
+			"country": "Spain"
+		},
+		{
+			"degree": "Analista Programador en la tecnología .Net",
+			"institution": "Ánfora",
+			"startDate": "2006-11-01",
+			"endDate": "2007-04-01",
+			"city": "Málaga",
+			"country": "Spain"
+		}
+	],
+	"languages": [
+		{
+			"languageCode": "fre",
+			"understandingListening": "B1",
+			"understandingReading": "B1",
+			"speakingInteraction": "B1",
+			"speakingProduction": "B1",
+			"writingProduction": "B1"
+		},
+		{
+			"languageCode": "spa",
+			"understandingListening": "C1",
+			"understandingReading": "C1",
+			"speakingInteraction": "C1",
+			"speakingProduction": "C1",
+			"writingProduction": "C1"
+		},
+		{
+			"languageCode": "eng",
+			"understandingListening": "A2",
+			"understandingReading": "A2",
+			"speakingInteraction": "A2",
+			"speakingProduction": "A2",
+			"writingProduction": "A2"
+		}
+	],
+	"skills": [
+		{ "title": "Trabajo en equipo" },
+		{ "title": "Responsabilidad en el trabajo" },
+		{ "title": "Organizacin y puntualidad" },
+		{ "title": "Comunicacin" },
+		{ "title": "Capacidad de aprendizaje rpido y trabajo en equipo" },
+		{ "title": "Resolucin de problemas" },
+		{ "title": "sociable" },
+		{ "title": "Capacidad de resolucin de problemas" }
+	]
+}
