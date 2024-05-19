@@ -1,8 +1,8 @@
 package com.nttdata.services;
 
 import java.util.List;
+import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.nttdata.entities.Client;
@@ -21,7 +21,12 @@ public class ClientService {
     }
 
     public Client findById(Long id) {
-        return clientRepository.findById(id).get();
+        Optional<Client> optionalClient = clientRepository.findById(id);
+        if (optionalClient.isPresent()) {
+            return optionalClient.get();
+        } else {
+            return null;
+        }
     }
 
     public Client save(Client client) {
@@ -29,8 +34,11 @@ public class ClientService {
     }
 
     public void delete(Long id) {
-        Client clientToDelete = clientRepository.findById(id).get();
-        clientRepository.delete(clientToDelete);
+        Optional<Client> optionalClient = clientRepository.findById(id);
+        if (optionalClient.isPresent()) {
+            Client clientToDelete = optionalClient.get();
+            clientRepository.delete(clientToDelete);
+        }
     }
 
 }
