@@ -2,11 +2,15 @@ package com.nttdata.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -22,15 +26,6 @@ public class Sector {
     @Column(name = "description")
     private String description;
 
-
     @OneToMany(mappedBy = "sector")
     private Set<Degree> degrees = new LinkedHashSet<>();
-
-    public Set<Degree> getDegrees() {
-        return degrees;
-    }
-
-    public void setDegrees(Set<Degree> degrees) {
-        this.degrees = degrees;
-    }
 }

@@ -25,6 +25,6 @@ public class Language {
     @Column(name = "language_code")
     private String languageCode;
 
-    @OneToMany(mappedBy = "language")
+    @OneToMany(mappedBy = "language", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<LanguageProficiency> languageProficiencies = new LinkedHashSet<>();
 }

@@ -20,7 +20,6 @@ public class App {
             String cvString = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
             JsonNode rootNode = JSON.parse(cvString);
             JsonNode educationNode = rootNode.get("education");
-
         }
     }
 }

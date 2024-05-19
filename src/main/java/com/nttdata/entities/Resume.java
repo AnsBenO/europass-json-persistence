@@ -15,7 +15,7 @@ import java.util.Set;
 @Setter
 @Getter
 @Entity
-@Table(name= "Resume")
+@Table(name = "Resume")
 public class Resume {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -47,13 +47,13 @@ public class Resume {
     @JoinColumn(name = "primary_language_id")
     private Language primaryLanguage;
 
-    @OneToMany(mappedBy = "resume")
+    @OneToMany(mappedBy = "resume", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Experience> experiences = new LinkedHashSet<>();
 
-    @OneToMany(mappedBy = "resume")
+    @OneToMany(mappedBy = "resume", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Skill> skills = new LinkedHashSet<>();
 
-    @OneToMany(mappedBy = "resume")
+    @OneToMany(mappedBy = "resume", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<LanguageProficiency> languageProficiencies = new LinkedHashSet<>();
 
     @ManyToMany
@@ -61,13 +61,11 @@ public class Resume {
     private Set<Certificate> certificates = new LinkedHashSet<>();
 
     @ManyToMany
-    @JoinTable(joinColumns = @JoinColumn(name = "resume_id"))
+    @JoinTable(name = "resume_country", joinColumns = @JoinColumn(name = "resume_id"), inverseJoinColumns = @JoinColumn(name = "country_id"))
     private Set<Country> countries = new LinkedHashSet<>();
 
     @ManyToMany
-    @JoinTable(name = "Resume_educations",
-            joinColumns = @JoinColumn(name = "resume_id"),
-            inverseJoinColumns = @JoinColumn(name = "educations_id"))
+    @JoinTable(name = "Resume_educations", joinColumns = @JoinColumn(name = "resume_id"), inverseJoinColumns = @JoinColumn(name = "educations_id"))
     private Set<Education> educations = new LinkedHashSet<>();
 
 }

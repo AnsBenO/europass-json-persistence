@@ -5,47 +5,82 @@ import com.nttdata.entities.Address;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
+import jakarta.persistence.PersistenceException;
 
 public class AddressRepository {
-    private final EntityManager entityManager;
     private final EntityManagerFactory emf;
 
     public AddressRepository() {
         this.emf = Persistence.createEntityManagerFactory("cv_test_pu");
-        this.entityManager = this.emf.createEntityManager();
     }
 
     public AddressRepository(String pu) {
         this.emf = Persistence.createEntityManagerFactory(pu);
-        this.entityManager = this.emf.createEntityManager();
+    }
+
+    private EntityManager getEntityManager() {
+        return this.emf.createEntityManager();
     }
 
     public Address add(Address address) {
-        entityManager.getTransaction().begin();
-        entityManager.persist(address);
-        entityManager.getTransaction().commit();
-        return address;
+        EntityManager entityManager = getEntityManager();
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.persist(address);
+            entityManager.getTransaction().commit();
+            return address;
+        } catch (PersistenceException e) {
+            entityManager.getTransaction().rollback();
+            throw e;
+        } finally {
+            entityManager.close();
+        }
     }
 
     public Address update(Address address) {
-        entityManager.getTransaction().begin();
-        address = entityManager.merge(address);
-        entityManager.getTransaction().commit();
-        return address;
+        EntityManager entityManager = getEntityManager();
+        try {
+            entityManager.getTransaction().begin();
+            address = entityManager.merge(address);
+            entityManager.getTransaction().commit();
+            return address;
+        } catch (PersistenceException e) {
+            entityManager.getTransaction().rollback();
+            throw e;
+        } finally {
+            entityManager.close();
+        }
     }
 
-    public Address findById(int id) {
-        return entityManager.find(Address.class, id);
+    public Address findById(Long id) {
+        EntityManager entityManager = getEntityManager();
+        try {
+            return entityManager.find(Address.class, id);
+        } finally {
+            entityManager.close();
+        }
     }
 
-    public void delete(Address address) {
-        entityManager.getTransaction().begin();
-        entityManager.remove(address);
-        entityManager.getTransaction().commit();
+    public void delete(Long id) {
+        EntityManager entityManager = getEntityManager();
+        try {
+            Address address = entityManager.find(Address.class, id);
+            if (address != null) {
+                entityManager.getTransaction().begin();
+                entityManager.remove(address);
+                entityManager.getTransaction().commit();
+            }
+        } catch (PersistenceException e) {
+            entityManager.getTransaction().rollback();
+            throw e;
+        } finally {
+            entityManager.close();
+        }
     }
 
     public void close() {
-        this.entityManager.close();
-        this.emf.close();
+        if (this.emf.isOpen()) {
+            this.emf.close();
+        }
     }
 }
