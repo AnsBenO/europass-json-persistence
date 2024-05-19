@@ -2,6 +2,13 @@
 	"configurations": [
 		{
 			"type": "java",
+			"name": "Application",
+			"request": "launch",
+			"mainClass": "com.nttdata.Application",
+			"projectName": "europass-json-persistence"
+		},
+		{
+			"type": "java",
 			"name": "App",
 			"request": "launch",
 			"mainClass": "com.nttdata.App",

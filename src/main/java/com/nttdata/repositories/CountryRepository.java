@@ -1,10 +1,14 @@
 package com.nttdata.repositories;
 
+import java.util.List;
+
+import com.nttdata.entities.Client;
 import com.nttdata.entities.Country;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
+import jakarta.persistence.Query;
 
 public class CountryRepository {
     private final EntityManager entityManager;
