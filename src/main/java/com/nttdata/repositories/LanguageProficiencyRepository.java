@@ -2,6 +2,8 @@ package com.nttdata.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface LanguageProficiencyRepository extends JpaRepository<LanguageRepository, Long> {
+import com.nttdata.entities.LanguageProficiency;
+
+public interface LanguageProficiencyRepository extends JpaRepository<LanguageProficiency, Long> {
 
 }
