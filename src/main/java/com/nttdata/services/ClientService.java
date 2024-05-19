@@ -23,7 +23,7 @@ public class ClientService {
     }
 
     public Client findById(Long id) {
-        return clientRepository.findById(id);
+        return clientRepository.findById(id).get();
     }
 
     public Client save(Client client) {
@@ -31,7 +31,7 @@ public class ClientService {
     }
 
     public void delete(Long id) {
-        Client clientToDelete = clientRepository.findById(id);
+        Client clientToDelete = clientRepository.findById(id).get();
         clientRepository.delete(clientToDelete);
     }
 

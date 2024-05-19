@@ -1,5 +1,9 @@
 package com.nttdata.repositories;
 
-public class EmployerRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.nttdata.entities.Employer;
+
+public interface EmployerRepository extends JpaRepository<Employer, Long> {
 
 }

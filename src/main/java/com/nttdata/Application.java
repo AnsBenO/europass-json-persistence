@@ -18,7 +18,7 @@ public class Application {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
         ClientService clientService = applicationContext.getBean("clientService", ClientService.class);
         List<Client> clients = clientService.findAll();
-        logger.info(clients.toString());
+        logger.info("[ Found Clients ] : " + clients.toString());
 
     }
 }

@@ -1,5 +1,9 @@
 package com.nttdata.repositories;
 
-public class ExperienceTypeRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.nttdata.entities.ExperienceType;
+
+public interface ExperienceTypeRepository extends JpaRepository<ExperienceType, Long> {
 
 }
