@@ -1,0 +1,12 @@
+# Ignore Eclipse IDE files
+/.project
+/.classpath
+/.settings/
+/target/
+
+# Ignore IntelliJ IDEA files
+/.idea/
+/*.iml
+
+# Ignore VS Code files
+/.vscode/
