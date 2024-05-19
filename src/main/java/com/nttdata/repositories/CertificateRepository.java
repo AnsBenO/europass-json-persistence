@@ -1,5 +1,9 @@
 package com.nttdata.repositories;
 
-public class CertificateRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.nttdata.entities.Certificate;
+
+public interface CertificateRepository extends JpaRepository<Certificate, Long> {
 
 }
