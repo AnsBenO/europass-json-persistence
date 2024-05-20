@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.nttdata</groupId>
+  <artifactId>europass-json-persistence</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <name>europass-json-persistence</name>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
+  </properties>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-orm</artifactId>
+      <version>6.1.7</version>
+    </dependency>
+
+
+    <dependency>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-jpa</artifactId>
+      <version>3.3.0</version>
+    </dependency>
+
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>6.1.7</version>
+    </dependency>
+
+
+    <dependency>
+      <groupId>spring</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>1.0.2</version>
+    </dependency>
+
+
+    <!-- Lombok: Provides annotations to reduce boilerplate code in Java classes. -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.32</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- PostgreSQL JDBC Driver -->
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>42.7.3</version>
+    </dependency>
+
+    <!-- SLF4J API: A simple facade for various logging frameworks. -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>2.0.13</version>
+    </dependency>
+
+    <!-- Logback Classic: An implementation of SLF4J API, providing a logging framework. -->
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.4.14</version>
+    </dependency>
+
+    <!-- Hibernate Core: Object-relational mapping framework for Java applications. -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>7.0.0.Alpha2</version>
+      <type>pom</type>
+    </dependency>
+
+    <!-- Hibernate HikariCP: Integrates HikariCP as the connection pool provider for Hibernate. -->
+    <dependency>
+      <groupId>org.hibernate.orm</groupId>
+      <artifactId>hibernate-hikaricp</artifactId>
+      <version>7.0.0.Alpha2</version>
+    </dependency>
+
+    <!-- HikariCP: High-performance JDBC connection pool. -->
+    <dependency>
+      <groupId>com.zaxxer</groupId>
+      <artifactId>HikariCP</artifactId>
+      <version>5.1.0</version>
+    </dependency>
+
+    <!-- Jackson Core: Core functionality for reading and writing JSON in Java. -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>2.17.0</version>
+    </dependency>
+
+    <!-- Jackson Databind: Jackson module for reading and writing JSON data via ObjectMapper. -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.17.0</version>
+    </dependency>
+
+    <!-- Jackson Datatype JSR310: Jackson module for Java 8 Date & Time API support. -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.datatype</groupId>
+      <artifactId>jackson-datatype-jsr310</artifactId>
+      <version>2.17.0</version>
+    </dependency>
+
+    <!-- JUnit: Testing framework for Java. -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.1</version>
+      <scope>test</scope>
+    </dependency>
+
+
+  </dependencies>
+
+  <build>
+    <pluginManagement>      <!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>
+        <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.1.0</version>
+        </plugin>
+        <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.22.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.5.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version>
+        </plugin>
+        <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
+        <plugin>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.7.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>
