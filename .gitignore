@@ -1,5 +1,6 @@
 # Ignore Eclipse IDE files
 /.project
+/.metadata
 /.classpath
 /.settings/
 /target/
