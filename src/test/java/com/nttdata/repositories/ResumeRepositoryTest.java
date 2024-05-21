@@ -23,6 +23,7 @@ import jakarta.transaction.Transactional;
 @RunWith(SpringJUnit4ClassRunner.class)
 @Transactional
 @ActiveProfiles("sandbox")
+@ContextConfiguration(classes = TestConfig.class)
 public class ResumeRepositoryTest {
     @Autowired
     private ResumeRepository resumeRepository;
@@ -30,10 +31,6 @@ public class ResumeRepositoryTest {
     private SkillRepository skillRepository;
 
     private Resume resume;
-
-    public ResumeRepositoryTest() {
-
-    }
 
     @Before
     public void setUp() {
