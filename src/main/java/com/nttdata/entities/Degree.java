@@ -26,8 +26,4 @@ public class Degree {
     @OneToOne(mappedBy = "degree")
     private Education education;
 
-    @ManyToOne
-    @JoinColumn(name = "sector_id")
-    private Sector sector;
-
 }

@@ -15,16 +15,16 @@ import java.util.Set;
 @Setter
 @Getter
 @Entity
-@Table(name="education")
+@Table(name = "education")
 public class Education {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="start_date")
+    @Column(name = "start_date")
     private LocalDate startDate;
 
-    @Column(name="end_date")
+    @Column(name = "end_date")
     private LocalDate endDate;
 
     @OneToOne(orphanRemoval = true)
@@ -33,5 +33,9 @@ public class Education {
 
     @ManyToMany(mappedBy = "educations")
     private Set<Resume> resumes = new LinkedHashSet<>();
+
+    @ManyToOne
+    @JoinColumn(name = "sector_id")
+    private Sector sector;
 
 }

@@ -21,7 +21,7 @@ import jakarta.persistence.EntityManagerFactory;
 @EnableTransactionManagement
 @EnableJpaRepositories(basePackages = "com.nttdata.repositories")
 @ComponentScan("com.nttdata")
-public class AppConfig {
+public class TestConfig {
 
     /**
      * This method creates a LocalEntityManagerFactoryBean bean which is used to

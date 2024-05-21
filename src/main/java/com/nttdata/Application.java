@@ -18,7 +18,7 @@ public class Application {
                 AppConfig.class)) {
             ClientService clientService = applicationContext.getBean("clientService", ClientService.class);
             List<Client> clients = clientService.findAll();
-            logger.info("[ FOUND CLIENTS ] : {}", clients);
+            logger.info("[ FOUND CLIENTS ] >>>>>>>>>>>>> : {}", clients);
         }
     }
 }

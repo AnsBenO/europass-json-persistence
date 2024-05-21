@@ -39,6 +39,12 @@ public class Resume {
     @Column(name = "phone_number")
     private String phoneNumber;
 
+    @Column(name = "IT_career_start_date")
+    private LocalDate ITCareerStartDate;
+
+    @Column(name = "summary")
+    private String summary;
+
     @ManyToOne
     @JoinColumn(name = "address_id")
     private Address address;

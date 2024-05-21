@@ -23,6 +23,9 @@ public class Country {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "nationality")
+    private String nationality;
+
     @OneToMany(mappedBy = "country")
     private Set<City> cities = new LinkedHashSet<>();
 

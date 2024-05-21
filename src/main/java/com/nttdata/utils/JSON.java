@@ -14,7 +14,7 @@ public class JSON {
     private JSON() {
     }
 
-    private final static ObjectMapper objectMapper = getDefaulObjectMapper();
+    private final static ObjectMapper objectMapper = getDefaultObjectMapper();
 
     /**
      * Returns a default ObjectMapper instance that is used by all the methods in
@@ -32,7 +32,7 @@ public class JSON {
      *
      * @return A default ObjectMapper instance.
      */
-    public static ObjectMapper getDefaulObjectMapper() {
+    public static ObjectMapper getDefaultObjectMapper() {
         ObjectMapper defaultObjectMapper = new ObjectMapper();
 
         // Register the JavaTimeModule, which allows Jackson to serialize and

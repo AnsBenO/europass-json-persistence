@@ -27,5 +27,5 @@ public class Sector {
     private String description;
 
     @OneToMany(mappedBy = "sector")
-    private Set<Degree> degrees = new LinkedHashSet<>();
+    private Set<Education> educations = new LinkedHashSet<>();
 }
