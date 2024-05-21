@@ -23,13 +23,13 @@ public class Country {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "nationality")
-    private String nationality;
+    @Column(name = "nationality_name")
+    private String nationalityName;
 
     @OneToMany(mappedBy = "country")
     private Set<City> cities = new LinkedHashSet<>();
 
-    @ManyToMany(mappedBy = "countries")
+    @OneToMany(mappedBy = "nationality")
     private Set<Resume> resumes = new LinkedHashSet<>();
 
 }

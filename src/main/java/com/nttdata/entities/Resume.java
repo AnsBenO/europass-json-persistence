@@ -66,9 +66,8 @@ public class Resume {
     @JoinTable(joinColumns = @JoinColumn(name = "resume_id"))
     private Set<Certificate> certificates = new LinkedHashSet<>();
 
-    @ManyToMany
-    @JoinTable(name = "resume_country", joinColumns = @JoinColumn(name = "resume_id"), inverseJoinColumns = @JoinColumn(name = "country_id"))
-    private Set<Country> countries = new LinkedHashSet<>();
+    @ManyToOne()
+    private Country nationality;
 
     @ManyToMany
     @JoinTable(name = "Resume_educations", joinColumns = @JoinColumn(name = "resume_id"), inverseJoinColumns = @JoinColumn(name = "educations_id"))

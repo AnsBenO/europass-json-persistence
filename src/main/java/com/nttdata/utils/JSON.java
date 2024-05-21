@@ -14,7 +14,7 @@ public class JSON {
     private JSON() {
     }
 
-    private final static ObjectMapper objectMapper = getDefaultObjectMapper();
+    private static final ObjectMapper objectMapper = getDefaultObjectMapper();
 
     /**
      * Returns a default ObjectMapper instance that is used by all the methods in
