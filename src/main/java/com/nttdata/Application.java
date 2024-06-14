@@ -1,24 +1,23 @@
 package com.nttdata;
 
-import java.util.List;
+import java.io.IOException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.nttdata.config.AppConfig;
-import com.nttdata.entities.Client;
-import com.nttdata.services.ClientService;
+import com.nttdata.loader.ResumeLoader;
 
 public class Application {
     private static final Logger logger = LoggerFactory.getLogger(Application.class);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         try (AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(
                 AppConfig.class)) {
-            ClientService clientService = applicationContext.getBean("clientService", ClientService.class);
-            List<Client> clients = clientService.findAll();
-            logger.info("[ FOUND CLIENTS ] >>>>>>>>>>>>> : {}", clients);
+            ResumeLoader resumeLoader = applicationContext.getBean(ResumeLoader.class);
+            resumeLoader.loadResume(" ");
+            logger.info("[ APPLICATION STARTED ]");
         }
     }
 }

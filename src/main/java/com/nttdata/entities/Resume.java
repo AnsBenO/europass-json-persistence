@@ -66,7 +66,7 @@ public class Resume {
     @JoinTable(joinColumns = @JoinColumn(name = "resume_id"))
     private Set<Certificate> certificates = new LinkedHashSet<>();
 
-    @ManyToOne()
+    @ManyToOne
     private Country nationality;
 
     @ManyToMany

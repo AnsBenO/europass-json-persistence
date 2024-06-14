@@ -1,9 +1,13 @@
 <persistence xmlns="https://jakarta.ee/xml/ns/persistence"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd" version="3.0">
+
+    <!-- Define the persistence unit -->
     <persistence-unit name="cv_test_pu" transaction-type="RESOURCE_LOCAL">
 
+        <!-- Specify the JPA provider -->
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
+        <!-- List of entity classes -->
         <class>com.nttdata.entities.Language</class>
         <class>com.nttdata.entities.LanguageProficiency</class>
         <class>com.nttdata.entities.Project</class>
@@ -22,14 +26,19 @@
         <class>com.nttdata.entities.Address</class>
         <class>com.nttdata.entities.Experience</class>
 
+        <!-- Database connection properties -->
         <properties>
             <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost/cv_structure"/>
             <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
             <property name="jakarta.persistence.jdbc.user" value="postgres"/>
             <property name="jakarta.persistence.jdbc.password" value="123456"/>
+
+            <!-- Hibernate properties -->
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>
-            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
+
+            <!-- Connection provider settings for HikariCP -->
             <property name="hibernate.connection.provider_class" value="org.hibernate.hikaricp.internal.HikariCPConnectionProvider" />
             <property name="hibernate.hikari.minimumIdle" value="20" />
             <property name="hibernate.hikari.maximumPoolSize" value="100" />
